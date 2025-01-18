@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+     <div class="fullcontent">
+        <div class="content">
+              <div class="imgcir"><img src="images/icon-star.svg" alt="staricon"></div>
+              <h2 style="color: white;">How did we do?</h2>
+              <p style="color: hsl(217, 12%, 63%);font-size: 15px;">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offring!</p>
+              <div class="tagp">
+                  <button class="ratbtn" onclick="btn(1)">1</button>
+                  <button class="ratbtn" onclick="btn(2)">2</button>
+                  <button class="ratbtn" onclick="btn(3)">3</button>
+                  <button class="ratbtn" onclick="btn(4)">4</button>
+                  <button class="ratbtn" onclick="btn(5)">5</button>
+              </div>
+              <button class="submit"  onclick="submit()">SUBMIT</button>
+            </div>
+          </div>
+        <script>
+          let selectedRating = null;
+          function btn(num){
+            selectedRating = num;
+          }
+          function submit(){
+          if(selectedRating !=0){
+           window.location.href=`index2.html?rating=${selectedRating}`;
+          }else{
+            alert("Please select the Rating");
+          }
+          }
+        </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+    <div class="fullcontent">
+        <div class="content">
+            <div class="centercontent">
+            <div><img src="/images/illustration-thank-you.svg" alt="rate image"></div>
+            <div class="selectview"><p>You selected <span id="res">0</span> out of 5</p></div>
+            <div class="thankpro"><h2>Thank you!</h2></div>
+            <div class="thankcontent">
+<pre> We appreciate you taking the time to give a rating
+   If you ever need more support,don't hesitate to
+                   get in touch</pre>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+        const URlvalue = new URLSearchParams(window.location.search);
+        const rating = URlvalue.get("rating");
+        let result =document.getElementById("res");
+        result.innerHTML=rating;
+
+        };
+    </script>
+</body>
+</html>
